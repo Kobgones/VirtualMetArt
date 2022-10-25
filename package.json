@@ -18,5 +18,8 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "eslint": "^8.26.0"
   }
 }
