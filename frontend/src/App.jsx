@@ -1,5 +1,6 @@
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
+import Highlights from "./pages/Highlights";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,9 @@ function App() {
       </p>
       <p>
         <Gallery />
+      </p>
+      <p>
+        <Highlights />
       </p>
     </div>
   );
