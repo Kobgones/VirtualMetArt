@@ -1,13 +1,17 @@
 import React from "react";
 import Home from "./pages/Home";
-
+import Gallery from "./pages/Gallery";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <p>
+        <Home />
+      </p>
+      <p>
+        <Gallery />
+      </p>
     </div>
   );
 }
