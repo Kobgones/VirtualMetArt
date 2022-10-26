@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div>
-      <h1 className="about-title">About</h1>
+      <h1 className="text-center">About</h1>
       <h3>About The Met</h3>
       <p className="about-description">
         The Metropolitan Museum of Art presents over 5,000 years of art from

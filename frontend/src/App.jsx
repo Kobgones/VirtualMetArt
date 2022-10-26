@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Highlights from "./pages/Highlights";
+import About from "./pages/About";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
       </p>
       <p>
         <Highlights />
+      </p>
+      <p>
+        <About />
       </p>
     </div>
   );
