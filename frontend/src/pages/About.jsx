@@ -3,9 +3,9 @@ import React from "react";
 function About() {
   return (
     <div>
-      <h1>About</h1>
+      <h1 className="about-title">About</h1>
       <h3>About The Met</h3>
-      <p>
+      <p className="about-description">
         The Metropolitan Museum of Art presents over 5,000 years of art from
         around the world for everyone to experience and enjoy. The Museum lives
         in two iconic sites in New York City—The Met Fifth Avenue and The Met
