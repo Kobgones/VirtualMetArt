@@ -1,11 +1,12 @@
 import React from "react";
+import "../styles/About.css";
 
 function About() {
   return (
-    <div>
-      <h1 className="text-center">About</h1>
-      <h3>About The Met</h3>
-      <p className="about-description">
+    <div className="bg-[url('./media/about-background.jpg')] bg-cover h-screen flex flex-col">
+      <h1 className="page-title text-white text-5xl my-4">About</h1>
+      <h3 className="text-white">About The Met</h3>
+      <p className="about-description text-white">
         The Metropolitan Museum of Art presents over 5,000 years of art from
         around the world for everyone to experience and enjoy. The Museum lives
         in two iconic sites in New York City—The Met Fifth Avenue and The Met
