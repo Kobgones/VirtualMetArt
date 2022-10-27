@@ -22,9 +22,9 @@ function App() {
               <Link to="gallery">Gallery</Link>
             </li>
             <li>
-              <li>
-                <Link to="highlights">Highlights</Link>
-              </li>
+              <Link to="highlights">Highlights</Link>
+            </li>
+            <li>
               <Link to="about">About</Link>
             </li>
           </ul>
