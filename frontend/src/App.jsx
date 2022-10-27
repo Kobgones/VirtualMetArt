@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Highlights from "./pages/Highlights";
 import About from "./pages/About";
-
 import "./App.css";
 import "./styles/Home.css";
 
