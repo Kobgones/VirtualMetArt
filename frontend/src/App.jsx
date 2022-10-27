@@ -7,23 +7,24 @@ import Highlights from "./pages/Highlights";
 import About from "./pages/About";
 
 import "./App.css";
+import "./styles/Home.css";
 
 function App() {
   return (
     <Router>
       <div>
         <nav>
-          <ul>
+          <ul className="flex space-x-4">
             <li>
               <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="highlights">Highlights</Link>
             </li>
             <li>
               <Link to="gallery">Gallery</Link>
             </li>
             <li>
+              <li>
+                <Link to="highlights">Highlights</Link>
+              </li>
               <Link to="about">About</Link>
             </li>
           </ul>
@@ -31,8 +32,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="highlights" element={<Highlights />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="highlights" element={<Highlights />} />
           <Route path="about" element={<About />} />
         </Routes>
       </div>
