@@ -26,6 +26,6 @@ p {
   font-family: var(--text-font);
 }
 
-.page-title{
+.page-title {
   transform: rotate(-90deg);
 }
