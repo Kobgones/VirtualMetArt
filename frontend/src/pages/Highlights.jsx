@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/Highlights.css";
 
 function Highlights() {
   return (
-    <div className="highlightsPage bg-primary text-background transform-">
+    <div className="highlightsPage bg-primary text-background ">
       <div className="title ">
-        <h1 className="text-6xl	text-center">Highlights</h1>
+        <h1 className="text-6xl	text-center ">Highlights</h1>
       </div>
       <br />
       <div className="highlightsPictures flex w-1/4 flex-row">
