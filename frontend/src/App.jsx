@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
-import "./styles/Home.css";
+import "./styles/Gallery.css";
 
 function App() {
   return (
