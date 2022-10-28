@@ -26,5 +26,6 @@ button, p {
 }
 
 .page-title{
-    writing-mode:sideways-lr;
+    transform: rotate(-90deg);
+
 }
