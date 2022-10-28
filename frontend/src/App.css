@@ -16,7 +16,8 @@
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--title-font);
 }
 
@@ -25,6 +26,6 @@ p {
   font-family: var(--text-font);
 }
 
-.page-title {
+.page-title{
   transform: rotate(-90deg);
 }
