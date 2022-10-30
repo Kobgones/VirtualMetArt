@@ -1,12 +1,12 @@
 input::placeholder {
-  color: #f5eeea;
+  color: black;
   font-style: italic;
 }
 
 .svg-arrow {
   appearance: none;
   background-repeat: no-repeat;
-  background-position: right 2% bottom 45%;
+  background-position: right 5% bottom 45%;
   background-size: auto 1em;
   background-image: url("./media/down-arrow.png");
 }
@@ -14,7 +14,8 @@ input::placeholder {
 .svg-search {
   appearance: none;
   background-repeat: no-repeat;
-  background-position: 3% 45%;
+  background-position: 97% 47%;
   background-size: auto 1.3em;
   background-image: url("./media/search.png");
 }
+

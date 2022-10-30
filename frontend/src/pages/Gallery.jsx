@@ -4,7 +4,7 @@ import Search from "../components/Gallery/Search";
 
 function Gallery() {
   return (
-    <div className="bg-background h-screen">
+    <div className="bg-background h-screen w-screen">
       <Search />
       <Result />
     </div>
