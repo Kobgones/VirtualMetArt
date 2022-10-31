@@ -1,6 +1,7 @@
 input::placeholder {
-  color: black;
+  color: #908C8C;
   font-style: italic;
+  font-family: "Playfaire Display", "serif";
 }
 
 .svg-arrow {

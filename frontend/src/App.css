@@ -22,7 +22,7 @@ h3 {
 }
 
 button,
-p {
+p, select {
   font-family: var(--text-font);
 }
 
