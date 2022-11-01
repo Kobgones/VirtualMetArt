@@ -33,9 +33,5 @@ box-shadow: rgba(236, 179, 101, 0.5) 2px 2px inset;
     }
   }
 
-  @media only screen and (min-width: 1024px) {
-    .down-arrow{
-      display: none;
-    }
-  }
+
   
