@@ -14,9 +14,11 @@ function Search() {
             <select
               name="Exhibitions"
               id="theme-select"
-              className="svg-arrow mt-6 mb-2 rounded-full text-background h-12 w-56 text-center text-xl bg-secondary hover:border-gray-600 focus:outline-none appearance-none"
+              className="svg-arrow mt-6 mb-2 rounded-full text-background h-12 w-56 text-center text-xl bg-secondary hover:border hover:border-secondary hover:bg-transparent focus:outline-none appearance-none"
             >
-              <option value="">Exhibitions</option>
+              <option selected disabled>
+                Exhibitions
+              </option>
               <option value="">Egyptian Art</option>
               <option value="">European Paintings</option>
               <option value="">Modern Art</option>
@@ -27,9 +29,11 @@ function Search() {
             <select
               name="Categories"
               id="theme-select"
-              className="svg-arrow mb-2 rounded-full text-background h-12 w-56 text-center text-xl bg-secondary hover:border-gray-600 focus:outline-none appearance-none sm:mt-6 sm:ml-6"
+              className="svg-arrow mb-2 rounded-full text-background h-12 w-56 text-center text-xl bg-secondary hover:border hover:border-secondary hover:bg-transparent focus:outline-none appearance-none sm:mt-6 sm:ml-6"
             >
-              <option value="">Categories</option>
+              <option selected disabled>
+                Categories
+              </option>
               <option value="">Paintings</option>
               <option value="">Sculpture</option>
               <option value="">Photography</option>
