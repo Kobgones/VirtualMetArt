@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 import "./styles/Gallery.css";
+import "./styles/Home.css";
 
 function App() {
   return (
