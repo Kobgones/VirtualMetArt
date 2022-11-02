@@ -29,3 +29,16 @@ p {
 .page-title{
   transform: rotate(-90deg);
 }
+
+
+
+/*********************** MEDIA QUERIES RESPONSIVE *********************/
+
+@media screen and (max-width: 425px) {
+
+}
+
+
+@media screen and (min-width: 426px) {
+
+}
