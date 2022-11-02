@@ -1,12 +1,13 @@
 input::placeholder {
-  color: #f5eeea;
+  color: #908C8C;
   font-style: italic;
+  font-family: "Playfaire Display", "serif";
 }
 
 .svg-arrow {
   appearance: none;
   background-repeat: no-repeat;
-  background-position: right 2% bottom 45%;
+  background-position: right 5% bottom 45%;
   background-size: auto 1em;
   background-image: url("./media/down-arrow.png");
 }
@@ -14,7 +15,11 @@ input::placeholder {
 .svg-search {
   appearance: none;
   background-repeat: no-repeat;
-  background-position: 3% 45%;
+  background-position: 97% 47%;
   background-size: auto 1.3em;
   background-image: url("./media/search.png");
+}
+
+.galery-shadow img {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) ;
 }
