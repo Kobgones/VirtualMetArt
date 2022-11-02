@@ -1,7 +1,18 @@
-.imagesHighlights {
-    width: 300px;
-    height: 300px;
+#titleHighlights {
+    /* padding: 30px; */
+}
 
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+.imagesCarousel {
+    /* width: 300px; */
+}
+
+.imagesHighlights {
+    width: 500px;
+    height: 500px;
 }
 
 .classImagesHighlights {
@@ -16,19 +27,26 @@
 padding-bottom: 80px;
 }
 
-#titleHighlights {
-    /* padding: 30px; */
+
+
+
+
+/*********************** MEDIA QUERIES RESPONSIVE *********************/
+
+@media screen and (max-width: 640px) {
+    
 }
 
-.imagesCarousel {
-    /* width: 300px; */
+
+@media screen and (min-width: 641px){
+    .titleAndImages {
+        display: flex;
+    }
+    .imagesCarousel {
+        max-width: 500px;    
+    }
 }
 
-.carousel {
-    /* display: flex;
-    justify-content: center; */
-}
+@media screen and (min-width: 1024px) {
 
-.titleAndImages {
-    display: flex;
 }
