@@ -9,14 +9,7 @@
   padding: 1rem;
   background: transparent;
   color: #fff;
-}
-
-.navBarLinks {
-  display: flex;
-}
-
-.navBarLink {
-  padding: 0 0.3rem;
+  z-index: 1;
 }
 
 .navBurger {
@@ -27,6 +20,7 @@
 }
 
 .navBarLinks {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -49,7 +43,7 @@
 .navBarLink {
   display: block;
   padding: 1.5rem;
-  font-size: 7vw;
+  font-size: 5vw;
 }
 .navBurger {
   display: block;
