@@ -12,23 +12,27 @@ function Navbar() {
     <nav className={`navBar ${showLinks ? "showNav" : "hideNav"}`}>
       <div className="navBarLogo">Logo</div>
       <ul className="navBarLinks">
-        <li className="navBarItem">
-          <Link className="navBarLink" to="/">
+        <li className="navBarItem slideInDown-1">
+          <Link className="navBarLink" to="/" onClick={handleShowLinks}>
             Home
           </Link>
         </li>
-        <li className="navBarItem">
-          <Link className="navBarLink" to="gallery">
+        <li className="navBarItem slideInDown-2">
+          <Link className="navBarLink" to="gallery" onClick={handleShowLinks}>
             Gallery
           </Link>
         </li>
-        <li className="navBarItem">
-          <Link className="navBarLink" to="highlights">
+        <li className="navBarItem slideInDown-3">
+          <Link
+            className="navBarLink"
+            to="highlights"
+            onClick={handleShowLinks}
+          >
             Highlights
           </Link>
         </li>
-        <li className="navBarItem">
-          <Link className="navBarLink" to="about">
+        <li className="navBarItem slideInDown-4">
+          <Link className="navBarLink" to="about" onClick={handleShowLinks}>
             About
           </Link>
         </li>
