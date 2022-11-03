@@ -1,83 +1,47 @@
-.highlightsPage{
-    /* width: 100vw; */
+
+.hl-Title {
+    padding-top: 50px;
 }
 
-#titleHighlights {
-    /* padding: 30px; */
-}
-
-.carousel {
-
-}
-.imagesCarousel {
-    /* width: 300px; */
-    /* max-width: 500px; */
-}
-
-.titleAndImages {
-    /* padding: 40px 40px 0px 40px; */
-    gap: 20px;
-}
-.imagesHighlights {
-    width: 500px;
-    height: 500px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.classImagesHighlights {
+.hlListObjects{
     display: flex;
-    /* border: 2px solid red; */
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    width: 100%;
+ }
+
+.hlObject1{
+text-align: center;
 }
 
-.nameArtist{
-padding-bottom: 20px;
+.hlPictures {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding: 30px;
+    max-width: 700px;
+}
+
+.hlDescription {
+    font-size: 20px;
+}
+.hlNameArtist{
+    padding-bottom: 20px;
 }
 
 
 /*********************** MEDIA QUERIES RESPONSIVE *********************/
 
 @media screen and (max-width: 640px) {
-    .titleHighlights {
-        padding-top: 20px;
-    }
-    .titleAndImages {
-        padding: 0px 20px 0px 20px;
+    .hl-Title {
+        font-size: 60px;
     }
 }
 
 
-@media screen and (min-width: 641px){
-    .titleAndImages {
-        gap: 20px;
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
+@media screen and (min-width: 640px){
+    .hl-Title {
+        font-size: 100px;
     }
 
-    .imagesCarousel {
-        /* max-width: 700px; */
-        /* padding: 40px 40px 0px 40px; */
-        /* min-width: 500px; */
-        max-width: 800px
-
-    }
-
-    .classTitle {
-        display: flex;
-        align-items: center;
-    }
-    
-    .titleHighlights {
-        margin-top: 250px;
-        transform: rotate(-90deg)
-        /* transform: rotate(270deg); */
-    }
 }
-
-/* @media screen and (min-width: 1024px) {
-
-} */
