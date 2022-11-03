@@ -8,11 +8,18 @@ export default function Home() {
         <h1 className="text-7xl text-background text-left drop-shadow-md pt-3 pl-3 lg:self-start lg:text-8xl lg:w-44 lg:pl-6">
           Virtual Met'Art
         </h1>
-        <div className="down-arrow" />
+        <div className="down-arrow w-14 pt-96">
+          <a href="#home-text" className="text-white">
+            <img src="./media/down-arrow.png" alt="Scroll" />
+          </a>
+        </div>
       </div>
 
       <section className="bg-background py-6 lg:px-14 lg:py-10 flex flex-col items-center">
-        <h2 className="text-primary text-4xl text-center pt-5 px-4 mb-6">
+        <h2
+          id="home-text"
+          className="text-primary text-4xl text-center pt-5 px-4 mb-6"
+        >
           Start your <span className="text-gold italic">virtual art </span>
           journey with MET !
         </h2>
