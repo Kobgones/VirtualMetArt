@@ -1,12 +1,12 @@
 import React from "react";
-import Result from "../components/Gallery/Result";
+import Results from "../components/Gallery/Results";
 import Search from "../components/Gallery/Search";
 
 function Gallery() {
   return (
     <div className="bg-primary min-h-screen w-screen">
       <Search />
-      <Result />
+      <Results />
     </div>
   );
 }
