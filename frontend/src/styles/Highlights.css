@@ -1,18 +1,27 @@
+.highlightsPage{
+    width: 100vw;
+}
+
 #titleHighlights {
     /* padding: 30px; */
 }
 
 .carousel {
-    display: flex;
-    justify-content: center;
+
 }
 .imagesCarousel {
     /* width: 300px; */
 }
 
+.titleAndImages {
+    padding: 40px 40px 0px 40px;
+    gap: 20px;
+}
 .imagesHighlights {
     width: 500px;
     height: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .classImagesHighlights {
@@ -20,7 +29,7 @@
     /* border: 2px solid red; */
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
 .nameArtist{
@@ -40,10 +49,16 @@ padding-bottom: 80px;
 
 @media screen and (min-width: 641px){
     .titleAndImages {
+        /* padding: 40px 40px 0px 40px; */
+        gap: 20px;
         display: flex;
+        justify-content: center;
+    }
+    .carousel {
+        max-width: 700px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
 
-}
+} */
