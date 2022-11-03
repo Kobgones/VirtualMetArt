@@ -8,9 +8,9 @@ export default function Home() {
         <h1 className="text-7xl text-background text-left drop-shadow-md pt-3 pl-3 lg:self-start lg:text-8xl lg:w-44 lg:pl-6">
           Virtual Met'Art
         </h1>
-        <div className="mt-96">
-          <a href="#home-text" className="text-white page-title down-arrow">
-            <img src="frontend/media/down-arrow.png" alt="" />
+        <div className="down-arrow w-14 pt-96">
+          <a href="#home-text" className="text-white">
+            <img src="./media/down-arrow.png" alt="Scroll" />
           </a>
         </div>
       </div>

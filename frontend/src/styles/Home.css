@@ -1,16 +1,9 @@
 .home-border {
 box-shadow: rgba(236, 179, 101, 0.5) 2px 2px inset;
 }
-  
-  .down-arrow {
-    position: absolute;
+
+.down-arrow {
     animation: jumpInfinite 2.5s infinite;
-    width: 26px;
-    height: 26px;
-    border-bottom: 4px solid;
-    border-right: 4px solid;
-    border-radius: 4px;
-    transform: rotateZ(45deg);
   }
   
   @keyframes jumpInfinite {
