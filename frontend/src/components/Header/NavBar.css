@@ -1,0 +1,85 @@
+.navBar {
+  font-family: playfair display;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  min-height: 75px;
+  padding: 1rem;
+  background-color: #23243c;
+  color: #fff;
+}
+
+.navBarLinks {
+  display: flex;
+}
+
+.navBarLink {
+  padding: 0 0.3rem;
+}
+
+.navBurger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .navBarLinks {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: -100vw;
+    bottom: 0;
+    height: 100vh;
+    padding: 2rem;
+    background-color: #23243c;
+    visibility: hidden;
+  }
+
+  .showNav .navBarLinks {
+    width: 100vw;
+    right: 0;
+    visibility: visible;
+  }
+  .navBarLink {
+    display: block;
+    padding: 1.5rem;
+    font-size: 7vw;
+  }
+  .navBurger {
+    display: block;
+  }
+  .navBurger:hover {
+    cursor: pointer;
+  }
+
+  .burgerLine,
+  .burgerLine::before,
+  .burgerLine::after {
+    display: block;
+    width: 40px;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  .burgerLine::before,
+  .burgerLine::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .burgerLine::before {
+    transform: translateY(-10px);
+  }
+
+  .burgerLine::after {
+    transform: translateY(10px);
+  }
+}
