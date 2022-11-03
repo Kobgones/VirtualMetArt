@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Header/Navbar";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Highlights from "./pages/Highlights";
@@ -16,23 +16,7 @@ function App() {
     <div>
       <Router>
         <div>
-          <nav>
-            <ul className="flex space-x-4">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="gallery">Gallery</Link>
-              </li>
-              <li>
-                <Link to="highlights">Highlights</Link>
-              </li>
-              <li>
-                <Link to="about">About</Link>
-              </li>
-            </ul>
-          </nav>
-
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="gallery" element={<Gallery />} />
