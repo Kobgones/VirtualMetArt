@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-      <div className="bg-[url('./media/home-background-image.jpg')] bg-cover bg-right h-screen flex flex-col items-center lg:bg-[center_70rem]">
+      <div className="bg-[url('./media/home-background-image.jpg')] bg-cover bg-right h-screen flex flex-col items-center lg:bg-center">
         <h1 className="text-7xl text-background text-right drop-shadow-xl pt-20 pr-6 lg:self-start lg:pt-20 lg:text-8xl lg:w-44 lg:pl-6">
           Virtual Met'Art
         </h1>
