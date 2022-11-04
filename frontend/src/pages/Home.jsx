@@ -4,13 +4,17 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-      <div className="bg-[url('./media/home-background-image.jpg')] bg-cover h-screen flex flex-col items-center lg:bg-[center_70rem]">
-        <h1 className="text-7xl text-background text-left drop-shadow-md pt-3 pl-3 lg:self-start lg:text-8xl lg:w-44 lg:pl-6">
+      <div className="bg-[url('./media/home-background-image.jpg')] bg-cover bg-right h-screen flex flex-col items-center lg:bg-center">
+        <h1 className="text-7xl text-background text-right drop-shadow-xl pt-20 pr-6 lg:self-start lg:pt-20 lg:text-8xl lg:w-44 lg:pl-6">
           Virtual Met'Art
         </h1>
-        <div className="down-arrow w-14 pt-96">
-          <a href="#home-text" className="text-white">
-            <img src="./media/down-arrow.png" alt="Scroll" />
+        <div className=" w-14 h-16 mt-auto">
+          <a href="#home-text">
+            <img
+              className="down-arrow"
+              src="./media/down-arrow.png"
+              alt="Scroll"
+            />
           </a>
         </div>
       </div>
