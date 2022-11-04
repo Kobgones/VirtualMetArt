@@ -34,9 +34,6 @@ p, select {
 
 
 @media only screen and (max-width: 639px) {
-  .page-title{
-    transform: rotate(0);
-  }
   .logo {
     width: 120px;
     height: 120px;
