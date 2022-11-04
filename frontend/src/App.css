@@ -31,8 +31,24 @@ p, select {
   transform: rotate(-90deg);
 }
 
+
+
+@media only screen and (max-width: 639px) {
+  .page-title{
+    transform: rotate(0);
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 @media only screen and (min-width: 640px) {
   .page-title{
     transform: rotate(0);
+  }
+  .logo {
+    width: 250px;
+    height: 250px;
   }
 }
