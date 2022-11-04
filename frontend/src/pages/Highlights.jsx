@@ -3,59 +3,83 @@ import "../styles/Highlights.css";
 
 function Highlights() {
   return (
-    <div className="highlightsPage bg-primary text-background ">
-      <div className="title ">
-        <h1 className="text-6xl	text-center ">Highlights</h1>
+    <div className="hl-Page bg-primary text-background">
+      <div className="hl-div-title">
+        <h1 className="hl-Title text-center text-secondary ">Highlights</h1>
+      </div>
+      <div className="hlListObjects">
+        <div className="hlObject1">
+          <img
+            className="hlPictures"
+            src="./src/assets/vincent van gogh.jpg"
+            alt="vincent van gogh"
+          />
+          <div className="hlDescription text-center">
+            <p>Self portrait with a straw hat</p>
+            <br />
+            <h2 className="hlNameArtist text-5xl">Vincent van gogh</h2>
+          </div>
+        </div>
+
+        <div className="hlObject2">
+          <img
+            className="hlPictures"
+            src="./src/assets/Georgia O’Keeffe.webp"
+            alt="Georgia O’Keeffe"
+          />
+          <div className="hlDescription text-center">
+            <p>Scowhide: Red, white, blue (1931)</p>
+            <br />
+            <h2 className="hlNameArtist text-center text-5xl">
+              Georgia O’Keeffe
+            </h2>
+          </div>
+        </div>
+
+        <div className="hlObject3">
+          <img
+            className="hlPictures"
+            src="./src/assets/Emanuel Leutze.jpeg"
+            alt="Emanuel Leutze"
+          />
+          <div className="hlDescription text-center">
+            <p>Washington crossing the Delaware (1851)</p>
+            <br />
+            <h2 className="hlNameArtist text-center text-5xl">
+              Emanuel Leutze
+            </h2>
+          </div>
+        </div>
+
+        <div className="hlObject4">
+          <img
+            className="hlPictures"
+            src="./src/assets/Claude-Monet.jpg"
+            alt="Claude-Monet"
+          />
+          <div className="hlDescription text-center">
+            <p>Bridge over a water lily pond (1899)</p>
+            <br />
+            <h2 className="hlNameArtist text-center text-5xl">Claude Monet</h2>
+          </div>
+        </div>
+
+        <div className="hlObject5">
+          <img
+            className="hlPictures"
+            src="./src/assets/Duccio di Buoninsegna.jpeg"
+            alt="Duccio di Buoninsegna"
+          />
+          <div className="hlDescription text-center">
+            <p>Virgin and child (1290-1300)</p>
+            <br />
+            <h2 className="hlNameArtist text-center text-5xl">
+              Duccio di Buoninsegna
+            </h2>
+          </div>
+        </div>
       </div>
       <br />
-      <div className="highlightsPictures flex w-1/4 flex-row">
-        <img
-          src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1045&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=945&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1166&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=945&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=945&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=945&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=945&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=945&q=80"
-          alt=""
-        />
-        <img
-          src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=945&q=80"
-          alt=""
-        />
-      </div>
-      <br />
-      <div className="artisteDescription text-center">
-        <p>Self-Portrait with a Straw Hat (obverse: The Potato Peeler)</p>
-        <br />
-        <h2 className="text-center text-8xl">Vincent van Gogh</h2>
-      </div>
     </div>
   );
 }
