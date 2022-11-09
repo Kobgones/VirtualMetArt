@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Item from "./Item";
 
 function Results({ ids }) {
   const [idsToShow, setIdsToShow] = useState([]);
   const [page, setPage] = useState(1);
-  const limit = 10;
+  const [limit] = useState(10);
+  const isMount = useRef(false);
 
-  useEffect(() => {
+  const setShowIdsWithPagination = () => {
     const start = page * limit - limit;
     const end = page * limit;
     setIdsToShow(ids.slice(start, end));
+  };
+
+  useEffect(() => {
+    if (page !== 1) setPage(1);
+    else setShowIdsWithPagination();
+  }, [ids]);
+
+  useEffect(() => {
+    if (!isMount.current) isMount.current = true;
+    else setShowIdsWithPagination();
   }, [page]);
 
   return (
     <div>
-      <div>
-        <img
-          className="rounded-md"
-          src="./media/the-death-of-socrates.jpeg"
-          alt="The death of Socrates"
-        />
-        <div className="text-center mt-6 text-background">
-          <h2 className="text-xl">The Death of Socrates</h2>
-          <h3 className="italic">Jacques-Louis David</h3>
-        </div>
-      </div>
       {idsToShow.map((id) => (
-        <Item id={id} />
+        <Item id={id} key={id} />
       ))}
       <button
         className="bg-white"

@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Item({ id }) {
   const [item, setItem] = useState({});
 
-  fetch(
-    `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`
-  )
-    .then((response) => response.json())
-    .then((result) => setItem(result))
-    .catch((err) => console.error(err));
+  useEffect(() => {
+    fetch(
+      `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`
+    )
+      .then((response) => response.json())
+      .then((result) => setItem(result))
+      .catch((err) => console.error(err));
+  }, []);
 
   if (item.primaryImageSmall)
     return (
