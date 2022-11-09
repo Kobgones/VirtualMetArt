@@ -26,7 +26,7 @@ function Results({ ids }) {
       {idsToShow.map((id) => (
         <Item id={id} key={id} />
       ))}
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-10 lg:mt-6">
         <button
           className="bg-secondary text-white hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 rounded-l-lg"
           type="button"
@@ -35,7 +35,7 @@ function Results({ ids }) {
           Prev
         </button>
         <button
-          className="bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 rounded-r-lg focus:outline-none appearance-none"
+          className="bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-8 rounded-r-lg focus:outline-none appearance-none"
           type="button"
           onClick={() => setPage(page + 1)}
         >
