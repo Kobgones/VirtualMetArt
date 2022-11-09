@@ -53,7 +53,11 @@ function Search({ search, setSearch, getSearchIds }) {
         value={search}
         onChange={(event) => setSearch(event.target.value)}
       />
-      <button className="bg-white" type="button" onClick={() => getSearchIds()}>
+      <button
+        className="mb-2 rounded-full text-primary h-12 w-56 text-center text-xl bg-background opacity-90 hover:border hover:border-secondary hover:bg-transparent focus:outline-none appearance-none sm:mt-6 sm:ml-6"
+        type="button"
+        onClick={() => getSearchIds()}
+      >
         Search
       </button>
     </div>
