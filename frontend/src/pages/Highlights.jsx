@@ -17,7 +17,7 @@ function Highlights() {
           <div className="hlDescription text-center">
             <p>Self portrait with a straw hat</p>
             <br />
-            <h2 className="hlNameArtist text-5xl">Vincent van gogh</h2>
+            <h2 className="hlNameArtist text-5xl">Vincent van Gogh</h2>
           </div>
         </div>
 
