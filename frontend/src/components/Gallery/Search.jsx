@@ -1,6 +1,6 @@
 import React from "react";
 
-function Search() {
+function Search({ search, setSearch, getSearchIds }) {
   return (
     <div className="pt-20 ml-8 sm:ml-10 md:px-10 md:pt-32 lg:pt-40 lg:px-16 lg:ml-0">
       <section className="w-full flex items-center justify-around sm:inline-block">
@@ -50,7 +50,12 @@ function Search() {
         className="svg-search bg-background opacity-90 h-12 w-11/12 pl-6 mt-8 mb-8 rounded-md focus:outline-none sm:mt-0 lg:w-full"
         type="text"
         placeholder="Search a title, artist or key word..."
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
       />
+      <button className="bg-white" type="button" onClick={() => getSearchIds()}>
+        Search
+      </button>
     </div>
   );
 }
