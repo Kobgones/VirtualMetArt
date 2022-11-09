@@ -31,9 +31,17 @@ function Results({ ids }) {
       <button
         className="bg-white"
         type="button"
+        onClick={() => setPage(page - 1)}
+      >
+        Go to previous page
+      </button>
+
+      <button
+        className="bg-white"
+        type="button"
         onClick={() => setPage(page + 1)}
       >
-        1 go next page
+        Go next page
       </button>
     </div>
   );
