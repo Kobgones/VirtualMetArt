@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
+import { CircleLoader } from "react-spinners";
 import Results from "../components/Gallery/Results";
 import Search from "../components/Gallery/Search";
 
 function Gallery() {
   const [ids, setIds] = useState([]);
   const [search, setSearch] = useState("");
+  const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
+    setIsProcessing(true);
     fetch(
       `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=cezanne`
     )
       .then((response) => response.json())
-      .then((result) => setIds(result.objectIDs))
+      .then((result) => {
+        setIds(result.objectIDs);
+        setIsProcessing(false);
+      })
       .catch((err) => console.error(err));
   }, []);
 
@@ -31,7 +37,13 @@ function Gallery() {
         setSearch={setSearch}
         getSearchIds={getSearchIds}
       />
-      <Results ids={ids} />
+      {isProcessing ? (
+        <div className="loader">
+          <CircleLoader color="#ECB365" size={300} />{" "}
+        </div>
+      ) : (
+        <Results ids={ids} />
+      )}
     </div>
   );
 }
