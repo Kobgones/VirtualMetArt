@@ -29,7 +29,7 @@ function HLImageSlider({ slides }) {
         return (
           <div
             className={index === current ? "slide active" : "slide"}
-            key={index}
+            // key={index}
           >
             {index === current && (
               <img
