@@ -24,6 +24,10 @@ function Gallery() {
       .catch((err) => console.error(err));
   };
 
+  const getVisibleButtons = () => {
+    setVisibleButtons(true);
+  };
+
   return (
     <div className="bg-primary min-h-screen w-screen">
       <Search

@@ -30,14 +30,22 @@ function Results({ ids }) {
       ))}
       <div className="flex justify-center pb-10 lg:mt-6">
         <button
-          className="bg-secondary text-white hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 rounded-l-lg"
+          className={
+            page > 1
+              ? "bg-secondary text-white hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 rounded-l-lg"
+              : "hidden"
+          }
           type="button"
           onClick={() => setPage(page - 1)}
         >
           Prev
         </button>
         <button
-          className="bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-8 rounded-r-lg focus:outline-none appearance-none"
+          className={
+          page > 1
+          ? "bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-8 rounded-r-lg focus:outline-none appearance-none"
+          : "bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-16 rounded-lg focus:outline-none appearance-none"
+          }
           type="button"
           onClick={() => setPage(page + 1)}
         >
