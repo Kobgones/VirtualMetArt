@@ -22,11 +22,15 @@ function Gallery() {
   }, []);
 
   const getSearchIds = () => {
+    setIsProcessing(true);
     fetch(
       `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=${search}`
     )
       .then((response) => response.json())
-      .then((result) => setIds(result.objectIDs))
+      .then((result) => {
+        setIds(result.objectIDs);
+        setIsProcessing(false);
+      })
       .catch((err) => console.error(err));
   };
 
