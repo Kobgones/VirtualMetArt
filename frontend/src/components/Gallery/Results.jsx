@@ -1,33 +1,47 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Item from "./Item";
 
-function Results() {
-  return (
-    <div className="w-80 m-auto pb-10 sm:w-9/12 lg:grid lg:grid-flow-col lg:w-fit lg:gap-x-6 lg:px-16 galery-shadow">
-      <div>
-        <img
-          className="rounded-md"
-          src="./media/the-death-of-socrates.jpeg"
-          alt="The death of Socrates"
-        />
-        <div className="text-center my-6 text-background">
-          <h2 className="text-xl">The Death of Socrates</h2>
-          <h3 className="italic">Jacques-Louis David</h3>
-        </div>
-      </div>
+function Results({ ids }) {
+  const [idsToShow, setIdsToShow] = useState([]);
+  const [page, setPage] = useState(1);
+  const [limit] = useState(10);
+  const isMount = useRef(false);
 
-      <div>
-        <img
-          className="rounded-md"
-          src="./media/the-death-of-socrates.jpeg"
-          alt="The death of Socrates"
-        />
-        <div className="text-center mt-6 text-background">
-          <h2 className="text-xl">The Death of Socrates</h2>
-          <h3 className="italic">Jacques-Louis David</h3>
-        </div>
+  const setShowIdsWithPagination = () => {
+    const start = page * limit - limit;
+    const end = page * limit;
+    setIdsToShow(ids.slice(start, end));
+  };
+  useEffect(() => {
+    if (page !== 1) setPage(1);
+    setShowIdsWithPagination();
+  }, [ids]);
+  useEffect(() => {
+    if (!isMount.current) isMount.current = true;
+    else setShowIdsWithPagination();
+  }, [page]);
+
+  return (
+    <div>
+      {idsToShow.map((id) => (
+        <Item id={id} key={id} />
+      ))}
+      <div className="flex justify-center pb-10 lg:mt-6">
+        <button
+          className="bg-secondary text-white hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 rounded-l-lg"
+          type="button"
+          onClick={() => setPage(page - 1)}
+        >
+          Prev
+        </button>
+        <button
+          className="bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-8 rounded-r-lg focus:outline-none appearance-none"
+          type="button"
+          onClick={() => setPage(page + 1)}
+        >
+          Next
+        </button>
       </div>
-      <Item />
     </div>
   );
 }
