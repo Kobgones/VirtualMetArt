@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Item from "./Item";
 
-function Results({ ids }) {
+function Results({ ids,  }) {
   const [idsToShow, setIdsToShow] = useState([]);
   const [page, setPage] = useState(1);
   const [limit] = useState(10);
@@ -25,7 +25,8 @@ function Results({ ids }) {
 
   return (
     <div>
-      {idsToShow.map((id) => (
+      {
+      idsToShow.map((id) => (
         <Item id={id} key={id} />
       ))}
       <div className="flex justify-center pb-10 lg:mt-6">
@@ -42,9 +43,9 @@ function Results({ ids }) {
         </button>
         <button
           className={
-          page > 1
-          ? "bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-8 rounded-r-lg focus:outline-none appearance-none"
-          : "bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-16 rounded-lg focus:outline-none appearance-none"
+            page > 1
+              ? "bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-8 rounded-r-lg focus:outline-none appearance-none"
+              : "bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-16 rounded-lg focus:outline-none appearance-none"
           }
           type="button"
           onClick={() => setPage(page + 1)}
