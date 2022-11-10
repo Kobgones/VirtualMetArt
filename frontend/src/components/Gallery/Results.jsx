@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Item from "./Item";
 
-function Results({ ids,  }) {
+function Results({ ids }) {
   const [idsToShow, setIdsToShow] = useState([]);
   const [page, setPage] = useState(1);
   const [limit] = useState(10);
@@ -25,8 +25,7 @@ function Results({ ids,  }) {
 
   return (
     <div>
-      {
-      idsToShow.map((id) => (
+      {idsToShow.map((id) => (
         <Item id={id} key={id} />
       ))}
       <div className="flex justify-center pb-10 lg:mt-6">

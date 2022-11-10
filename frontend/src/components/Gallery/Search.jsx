@@ -1,10 +1,9 @@
 import React from "react";
 
 function Search({ search, setSearch, getSearchIds }) {
-
   const handleEnterSubmit = (e) => {
     if (e.keyCode === 13) getSearchIds();
-  }
+  };
 
   return (
     <div className="pt-20 ml-8 sm:ml-10 md:px-10 md:pt-32 lg:pt-40 lg:px-16 lg:ml-0">
