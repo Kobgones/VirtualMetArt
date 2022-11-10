@@ -28,21 +28,22 @@ function Results({ ids }) {
       {idsToShow.map((id) => (
         <Item id={id} key={id} />
       ))}
-      <button
-        className="bg-white"
-        type="button"
-        onClick={() => setPage(page - 1)}
-      >
-        Go to previous page
-      </button>
-
-      <button
-        className="bg-white"
-        type="button"
-        onClick={() => setPage(page + 1)}
-      >
-        Go next page
-      </button>
+      <div className="flex justify-center pb-10 lg:mt-6">
+        <button
+          className="bg-secondary text-white hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 rounded-l-lg"
+          type="button"
+          onClick={() => setPage(page - 1)}
+        >
+          Prev
+        </button>
+        <button
+          className="bg-white text-secondary hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 lg:px-8 rounded-r-lg focus:outline-none appearance-none"
+          type="button"
+          onClick={() => setPage(page + 1)}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }
