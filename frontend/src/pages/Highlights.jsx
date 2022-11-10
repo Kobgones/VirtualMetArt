@@ -15,7 +15,6 @@ function Highlights() {
         {/* DISPLAY CAROUSEL THEN SCREEN > Tablet 1024px */}
         <HLImageSlider slides={HLSliderData} />;
       </div>
-
       <br />
     </div>
   );
