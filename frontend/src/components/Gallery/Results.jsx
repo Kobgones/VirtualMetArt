@@ -28,7 +28,7 @@ function Results({ ids }) {
       ))}
       <div className="flex justify-center pb-10 lg:mt-6">
         <button
-          className="bg-secondary text-white active:duration-75 transition duration-500 ease hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 rounded-l-lg lg:text-lg "
+          className="bg-secondary text-white active:duration-75 transition duration-500 ease hover:border hover:border-secondary hover:bg-transparent font-bold py-4 px-8 lg:py-6 rounded-l-lg lg:text-lg "
           type="button"
           onClick={() => setPage(page - 1)}
         >
