@@ -23,15 +23,14 @@ h3 {
 }
 
 button,
-p, select {
+p,
+select {
   font-family: var(--text-font);
 }
 
-.page-title{
+.page-title {
   transform: rotate(-90deg);
 }
-
-
 
 @media only screen and (max-width: 1240px) {
   .logo {
@@ -48,7 +47,7 @@ p, select {
 }
 
 @media only screen and (min-width: 640px) {
-  .page-title{
+  .page-title {
     transform: rotate(0);
   }
 }
