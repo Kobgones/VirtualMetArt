@@ -16,6 +16,7 @@ function Results({ ids }) {
     if (page !== 1) setPage(1);
     setShowIdsWithPagination();
   }, [ids]);
+
   useEffect(() => {
     if (!isMount.current) isMount.current = true;
     else setShowIdsWithPagination();
