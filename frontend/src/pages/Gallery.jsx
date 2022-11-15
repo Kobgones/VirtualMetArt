@@ -6,30 +6,30 @@ import Search from "../components/Gallery/Search";
 function Gallery() {
   const [ids, setIds] = useState([]);
   const [search, setSearch] = useState("");
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false); // state to know when display the loader
 
   useEffect(() => {
-    setIsProcessing(true);
+    setIsProcessing(true); // active the loader
     fetch(
       `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=cezanne`
     )
       .then((response) => response.json())
       .then((result) => {
         setIds(result.objectIDs);
-        setIsProcessing(false);
+        setIsProcessing(false); // disable loader after the fetch
       })
       .catch((err) => console.error(err));
   }, []);
 
   const getSearchIds = () => {
-    setIsProcessing(true);
+    setIsProcessing(true); // active the loader
     fetch(
       `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=${search}`
     )
       .then((response) => response.json())
       .then((result) => {
         setIds(result.objectIDs);
-        setIsProcessing(false);
+        setIsProcessing(false); // disable loader after the fetch
       })
       .catch((err) => console.error(err));
   };
@@ -41,9 +41,10 @@ function Gallery() {
         setSearch={setSearch}
         getSearchIds={getSearchIds}
       />
+      {/* ternary to display the loader or the result of the search (following the fetch) */}
       {isProcessing ? (
         <div className="loader">
-          <CircleLoader color="#ECB365" size={300} />{" "}
+          <CircleLoader color="#ECB365" size={250} />{" "}
         </div>
       ) : (
         <Results ids={ids} />
