@@ -18,7 +18,7 @@ function Item({ id }) {
     return (
       <div className="w-80 m-auto pb-10 sm:w-9/12 lg:grid lg:grid-flow-col lg:w-fit lg:items-center	lg:gap-x-6 lg:px-16 galery-shadow">
         {/* image showing modal component on click */}
-        <button type="button" onClick={() => setShowModal(true)}>
+        <button type="button" onClick={() => setShowModal(!showModal)}>
           {" "}
           <Modal showModal={showModal} setShowModal={setShowModal} />
           <img

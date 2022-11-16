@@ -1,6 +1,6 @@
 import React from "react";
 
-function Modal({ showModal, setShowModal }) {
+function Modal({ showModal }) {
   return (
     <div>
       {/* modal showed on click through useState in Item */}
@@ -40,13 +40,9 @@ function Modal({ showModal, setShowModal }) {
                 </div>
                 {/* close */}
                 <div className="flex items-center justify-end p-6 rounded-b">
-                  <button
-                    className="text-secondary background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={setShowModal}
-                  >
+                  <p className="text-secondary background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                     Close
-                  </button>
+                  </p>
                 </div>
               </div>
             </div>
