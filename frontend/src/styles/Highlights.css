@@ -70,9 +70,9 @@ h2 {
   }
 
   .HLSlideImages {
-    width: 700px;
-    height: 700px;
-    border-radius: 10px;
+    /* width: 700px;
+    height: 700px; */
+    /* border-radius: 30px; */
   }
 
   .right-arrow {
