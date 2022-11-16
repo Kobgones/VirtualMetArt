@@ -1,6 +1,6 @@
 import React from "react";
 
-function Modal({ showModal }) {
+function Modal({ showModal, item }) {
   return (
     <div>
       {/* modal showed on click through useState in Item */}
@@ -12,30 +12,34 @@ function Modal({ showModal }) {
               <div className="fullscreen bg-primary outline-none focus:outline-none">
                 {/* image showed with API */}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <img className="rounded-md" src="" alt="" />
+                  <img
+                    className="rounded-md"
+                    src={item.primaryImageSmall}
+                    alt={item.title}
+                  />
                 </div>
                 {/* list of details showed with API */}
                 <div className="relative p-6 flex-auto">
                   <h2 className="text-xl text-center my-6 text-background">
-                    The Death of Socrates
+                    Title : {item.title}
                   </h2>
                   <h3 className="italic text-center mx-2 text-background">
-                    Jacques-Louis David
+                    Artist : {item.artistDisplayName}
                   </h3>
                   <h4 className="my-4 text-slate-500 text-lg leading-relaxed>">
-                    Date
+                    Date : {item.objectEndDate}
                   </h4>
                   <h4 className="my-4 text-slate-500 text-lg leading-relaxed">
-                    Country
+                    Culture : {item.culture}
                   </h4>
                   <h4 className="my-4 text-slate-500 text-lg leading-relaxed>">
-                    Department
+                    Department : {item.department}
                   </h4>
                   <h4 className="my-4 text-slate-500 text-lg leading-relaxed>">
-                    Category
+                    Category : {item.objectName}
                   </h4>
                   <h4 className="my-4 text-slate-500 text-lg leading-relaxed>">
-                    Technique
+                    Technique : {item.medium}
                   </h4>
                 </div>
                 {/* close */}
