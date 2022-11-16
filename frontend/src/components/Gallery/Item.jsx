@@ -20,7 +20,11 @@ function Item({ id }) {
         {/* image showing modal component on click */}
         <button type="button" onClick={() => setShowModal(!showModal)}>
           {" "}
-          <Modal showModal={showModal} setShowModal={setShowModal} />
+          <Modal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            item={item}
+          />
           <img
             className="rounded-md"
             src={item.primaryImageSmall}
