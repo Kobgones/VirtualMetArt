@@ -23,7 +23,7 @@ function Results({ ids }) {
     else setShowIdsWithPagination();
   }, [page]);
 
-  return (
+  return ids.length > 0 ? (
     <div>
       {idsToShow.map((id) => (
         <Item id={id} key={id} />
@@ -52,6 +52,15 @@ function Results({ ids }) {
           Next
         </button>
       </div>
+    </div>
+  ) : (
+    <div className="flex flex-col items-center p-4">
+      <h1 className="text-white font-bold text-5xl p-2">
+        No results were found
+      </h1>
+      <h2 className="text-white italic text-2xl p-2">
+        Try a different keyword
+      </h2>
     </div>
   );
 }
