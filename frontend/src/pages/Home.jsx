@@ -8,6 +8,7 @@ export default function Home() {
         <h1 className="text-7xl text-background text-right drop-shadow-xl pt-20 pr-64 self-end w-16 md:w-24 lg:text-8xl lg:w-96">
           Virtual Met'Art
         </h1>
+        {/* scroll down arrow */}
         <div className=" w-14 h-16 mt-auto">
           <a href="#home-text">
             <img
@@ -36,6 +37,7 @@ export default function Home() {
             possibility to explore every MET's exhibition !{" "}
           </p>
         </div>
+        {/* gallery button */}
         <Link to="gallery">
           <button
             className="bg-gold opacity-90 h-16 w-56 px-4 rounded-md mt-10 md:w-64 md:h-20 lg:w-80 lg:h-20 lg:mt-10"
