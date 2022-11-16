@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 import "./styles/Gallery.css";
 import "./styles/Home.css";
+import "./styles/Modal.css";
 
 function App() {
   const location = useLocation();
