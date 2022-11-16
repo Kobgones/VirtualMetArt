@@ -78,7 +78,7 @@ h2 {
   .right-arrow {
     position: absolute;
     top: 55%;
-    right: 35%;
+    right: 30%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
     z-index: 2;
@@ -89,7 +89,7 @@ h2 {
   .left-arrow {
     position: absolute;
     top: 35%;
-    right: 35%;
+    right: 30%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
     z-index: 2;
@@ -118,9 +118,14 @@ h2 {
 
 @media screen and (min-width: 1440px) {
   .right-arrow {
-    font-size: 4.5rem;
+    font-size: 4rem;
+    top: 55%;
+    right: 35%;
   }
+
   .left-arrow {
-    font-size: 4.5rem;
+    font-size: 4rem;
+    top: 35%;
+    right: 35%;
   }
 }
