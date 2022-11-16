@@ -22,16 +22,18 @@ function Gallery() {
   }, []);
 
   const getSearchIds = () => {
-    setIsProcessing(true); // active the loader
-    fetch(
-      `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=${search}`
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        setIds(result.objectIDs);
-        setIsProcessing(false); // disable loader after the fetch
-      })
-      .catch((err) => console.error(err));
+    if (search) {
+      setIsProcessing(true); // active the loader
+      fetch(
+        `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=${search}`
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          setIds(result.objectIDs);
+          setIsProcessing(false); // disable loader after the fetch
+        })
+        .catch((err) => console.error(err));
+    }
   };
 
   return (
