@@ -6,12 +6,7 @@ function Search({ search, setSearch, getSearchIds }) {
   };
 
   return (
-    <div className="pt-20 ml-8 sm:ml-10 md:px-10 md:pt-32 lg:pt-40 lg:px-16 lg:ml-0">
-      <div className="pt-6 h-26 w-10 mt-10 mr-6 self-start sm:pt-0 sm:mt-0">
-        <h1 className="page-title mt-14 text-5xl text-secondary sm:mt-0 sm:text-7xl sm:mb-6">
-          Gallery
-        </h1>
-      </div>
+    <div className="ml-8 sm:pl-10 sm:pt-6 md:px-16 lg:pt-18 lg:ml-0">
       <section className="flex">
         <input
           className="bg-background opacity-90 h-12 w-9/12 pl-6 mt-8 mb-8 rounded-l-md focus:outline-none sm:mt-0 lg:w-11/12"
