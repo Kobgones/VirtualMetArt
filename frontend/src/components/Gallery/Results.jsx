@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Item from "./Item";
 
 function Results({ ids }) {
-  const [idsToShow, setIdsToShow] = useState([]);
-  const [page, setPage] = useState(1);
-  const [limit] = useState(10);
+  const [idsToShow, setIdsToShow] = useState([]); // temporary list, creating a limited amount of ID's to show related to the limit
+  const [page, setPage] = useState(1); 
+  const [limit] = useState(10); // amount of Item components we want mounted per page
   const isMount = useRef(false);
 
   const setShowIdsWithPagination = () => {
@@ -13,17 +13,17 @@ function Results({ ids }) {
     setIdsToShow(ids.slice(start, end));
   };
 
-  useEffect(() => {
+  useEffect(() => { // when ids change, set the page back to one
     if (page !== 1) setPage(1);
     else setShowIdsWithPagination();
   }, [ids]);
 
-  useEffect(() => {
+  useEffect(() => { 
     if (!isMount.current) isMount.current = true;
     else setShowIdsWithPagination();
   }, [page]);
 
-  return ids.length > 0 ? (
+  return ids.length > 0 ? ( // Show item components and "Next" button only if there's been a successful research
     <div>
       {idsToShow.map((id) => (
         <Item id={id} key={id} />
@@ -53,7 +53,7 @@ function Results({ ids }) {
         </button>
       </div>
     </div>
-  ) : (
+  ) : ( // if the research has not given any results, show this message and hide "Next" button
     <div className="flex flex-col items-center p-4">
       <h1 className="text-white font-bold text-5xl p-2">
         No results were found

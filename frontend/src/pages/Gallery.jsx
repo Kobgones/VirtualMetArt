@@ -5,10 +5,10 @@ import Search from "../components/Gallery/Search";
 import Filters from "../components/Gallery/Filters";
 
 function Gallery() {
-  const [ids, setIds] = useState([]);
+  const [ids, setIds] = useState([]); // list of IDs obtained from choosing a department or from researching a query
   const [allDepartments, setAllDepartments] = useState([]);
   const [searchIdDepartment, setSearchIdDepartment] = useState();
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(""); // word or query added to the input search bar
   const [isProcessing, setIsProcessing] = useState(false); // state to know when display the loader
 
   useEffect(() => {
@@ -26,6 +26,7 @@ function Gallery() {
 
   const getSearchIds = () => {
     if (searchIdDepartment && search) {
+      // search if a department has been chosen
       setIsProcessing(true); // active the loader
       fetch(
         `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&departmentId=${searchIdDepartment}&q=${search}`
@@ -37,6 +38,7 @@ function Gallery() {
         })
         .catch((err) => console.error(err));
     } else if (search) {
+      // search with a simple query, no department
       setIsProcessing(true); // active the loader
       fetch(
         `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=${search}`
