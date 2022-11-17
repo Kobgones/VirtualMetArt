@@ -38,12 +38,12 @@ function Item({ id }) {
             alt={item.title}
           />{" "}
         </button>
-        <h2 className="text-2xl text-center my-6 text-background">
+        <h2 className="text-xl text-center my-6 text-background">
           {item.title}
-          <h3 className="text-5xl italic text-center my-6 text-background">
-            {item.artistDisplayName}
-          </h3>
         </h2>
+        <h3 className="italic text-center my-6 text-background">
+          {item.artistDisplayName}
+        </h3>
       </div>
     );
 }
