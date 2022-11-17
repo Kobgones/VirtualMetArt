@@ -7,7 +7,7 @@ input::placeholder {
 .svg-arrow {
   appearance: none;
   background-repeat: no-repeat;
-  background-position: right 5% bottom 45%;
+  background-position: right 3% bottom 45%;
   background-size: auto 1em;
   background-image: url("./media/down-arrow.png");
 }
