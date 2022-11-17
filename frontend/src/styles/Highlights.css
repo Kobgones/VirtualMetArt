@@ -17,12 +17,12 @@ body {
     font-size: 60px;
     padding-top: 60px;
   }
-  .hlCarousel {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1023px) {
+  .hlMobile {
+    visibility: visible;
+  }
   .hlListObjects {
     display: flex;
     justify-content: center;
@@ -48,6 +48,17 @@ body {
   .hlNameArtist {
     padding-bottom: 20px;
   }
+  /* .hlCarousel {
+    display: none;
+  } */
+
+  .slider {
+    display: none;
+  }
+
+  .hlListObjects {
+    display: none;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1023px) {
@@ -55,12 +66,12 @@ body {
     font-size: 100px;
     padding-top: 100px;
   }
-  .hlCarousel {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1024px) {
+  .hlMobile {
+    display: none;
+  }
   .hl-Title {
     font-size: 100px;
     padding-top: 100px;

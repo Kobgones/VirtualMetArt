@@ -27,32 +27,37 @@ function HLImageSlider() {
   }
 
   return (
-    <section className="slider">
-      {showArrow && (
-        <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
-      )}
-      {showArrow && (
-        <FaArrowAltCircleDown className="right-arrow" onClick={nextSlide} />
-      )}
-      {highlightIds.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            // key={index}
-          >
-            {index === current && (
-              <Item
-                className="bg-gray-200"
-                id={slide}
-                key={slide}
-                setShowArrow={setShowArrow}
-                // on remonte le setShowArrow dans le composant Item
-              />
-            )}
-          </div>
-        );
-      })}
-    </section>
+    <>
+      <section className="slider">
+        Slider !!!!!!!!!!!!!!!!!!!
+        {showArrow && (
+          <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
+        )}
+        {showArrow && (
+          <FaArrowAltCircleDown className="right-arrow" onClick={nextSlide} />
+        )}
+        {highlightIds.map((slide, index) => {
+          return (
+            <div className={index === current ? "slide active" : "slide"}>
+              {index === current && (
+                <Item
+                  className="bg-gray-200"
+                  id={slide}
+                  key={slide}
+                  setShowArrow={setShowArrow}
+                />
+              )}
+            </div>
+          );
+        })}
+      </section>
+      <section className="hlMobile">
+        hlMobile !!!!!!!!!!!!
+        {highlightIds.map((slide, index) => {
+          <Item id={slide} key={slide} />;
+        })}
+      </section>
+    </>
   );
 }
 
