@@ -30,6 +30,10 @@ body {
     text-align: center;
   }
 
+  /* .hlMobile h2 {
+    background-color: green;
+  } */
+
   .hlListObjects {
     display: flex;
     justify-content: center;
@@ -79,6 +83,7 @@ body {
   .hlMobile {
     display: none;
   }
+
   .hl-Title {
     font-size: 100px;
     padding-top: 100px;

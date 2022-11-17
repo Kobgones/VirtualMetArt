@@ -40,7 +40,7 @@ function HLImageSlider() {
             <div className={index === current ? "slide active" : "slide"}>
               {index === current && (
                 <Item
-                  className="bg-gray-200"
+                  className="hlDesktop"
                   id={slide}
                   key={slide}
                   setShowArrow={setShowArrow}
