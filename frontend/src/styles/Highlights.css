@@ -1,8 +1,16 @@
-/*********************** MEDIA QUERIES RESPONSIVE *********************/
-
-h2 {
-  font-size: large;
+.hidden {
+  display: none;
 }
+
+.visible {
+  visibility: visible;
+}
+
+body {
+  background-color: #23243c;
+}
+
+/*********************** MEDIA QUERIES RESPONSIVE *********************/
 
 @media screen and (max-width: 640px) {
   .hl-Title {
@@ -77,7 +85,7 @@ h2 {
 
   .right-arrow {
     position: absolute;
-    top: 55%;
+    top: 57%;
     right: 30%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
@@ -88,7 +96,7 @@ h2 {
   }
   .left-arrow {
     position: absolute;
-    top: 35%;
+    top: 30%;
     right: 30%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
@@ -119,13 +127,13 @@ h2 {
 @media screen and (min-width: 1440px) {
   .right-arrow {
     font-size: 4rem;
-    top: 55%;
+    top: 56%;
     right: 35%;
   }
 
   .left-arrow {
     font-size: 4rem;
-    top: 35%;
+    top: 30%;
     right: 35%;
   }
 }

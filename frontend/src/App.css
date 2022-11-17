@@ -16,6 +16,11 @@
   scroll-behavior: smooth;
 }
 
+.logo:hover {
+  transform: scale(1.03);
+  /* fill: ("../src/assets/logo1-black.svg"); */
+}
+
 h1,
 h2,
 h3 {

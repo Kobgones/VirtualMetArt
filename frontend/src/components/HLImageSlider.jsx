@@ -25,12 +25,6 @@ function HLImageSlider() {
     return null;
   }
 
-  // const [showArrow, setShowArrow] = React.useState(true);
-
-  // const handleShowArrow = () => {
-  //   setShowArrow(!showArrow);
-  // };
-
   return (
     <section className="slider">
       <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
