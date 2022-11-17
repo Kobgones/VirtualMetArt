@@ -29,7 +29,6 @@ function HLImageSlider() {
   return (
     <>
       <section className="slider">
-        Slider !!!!!!!!!!!!!!!!!!!
         {showArrow && (
           <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
         )}
@@ -52,7 +51,6 @@ function HLImageSlider() {
         })}
       </section>
       <section className="hlMobile">
-        hlMobile !!!!!!!!!!!!
         {highlightIds.map((slide) => (
           <Item id={slide} key={slide} />
         ))}
