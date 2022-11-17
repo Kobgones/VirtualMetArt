@@ -53,9 +53,9 @@ function HLImageSlider() {
       </section>
       <section className="hlMobile">
         hlMobile !!!!!!!!!!!!
-        {highlightIds.map((slide, index) => {
-          <Item id={slide} key={slide} />;
-        })}
+        {highlightIds.map((slide) => (
+          <Item id={slide} key={slide} />
+        ))}
       </section>
     </>
   );
