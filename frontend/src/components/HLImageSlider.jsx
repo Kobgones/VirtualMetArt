@@ -46,6 +46,7 @@ function HLImageSlider() {
                 id={slide}
                 key={slide}
                 setShowArrow={setShowArrow}
+                // on remonte le setShowArrow dans le composant Item
               />
             )}
           </div>
