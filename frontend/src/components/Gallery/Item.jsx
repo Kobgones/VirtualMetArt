@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
 
-function Item({ id }) {
+function Item({ id, setShowArrow }) {
   const [item, setItem] = useState({});
   const [showModal, setShowModal] = React.useState(false);
 
@@ -14,18 +14,16 @@ function Item({ id }) {
       .catch((err) => console.error(err));
   }, []);
 
-  const [showArrow, setShowArrow] = React.useState(true);
-
-  // eslint-disable-next-line no-unused-vars
-  const handleShowArrow = () => {
-    setShowArrow(!showArrow);
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+    setShowArrow(showModal);
   };
 
   if (item.primaryImageSmall)
     return (
       <div className="w-80 m-auto pb-10 sm:w-9/12 lg:grid lg:grid-flow-col lg:w-fit lg:items-center	lg:gap-x-6 lg:px-16 galery-shadow">
         {/* image showing modal component on click */}
-        <button type="button" onClick={() => setShowModal(!showModal)}>
+        <button type="button" onClick={() => handleShowModal()}>
           {" "}
           <Modal
             showModal={showModal}

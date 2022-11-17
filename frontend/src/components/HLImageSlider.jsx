@@ -5,6 +5,7 @@ import Item from "./Gallery/Item";
 
 function HLImageSlider() {
   const [current, setCurrent] = useState(0);
+  const [showArrow, setShowArrow] = React.useState(true);
 
   const highlightIds = [
     11417, 436532, 436105, 436545, 437394, 437881, 438754, 437329, 204812,
@@ -27,8 +28,12 @@ function HLImageSlider() {
 
   return (
     <section className="slider">
-      <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleDown className="right-arrow" onClick={nextSlide} />
+      {showArrow && (
+        <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
+      )}
+      {showArrow && (
+        <FaArrowAltCircleDown className="right-arrow" onClick={nextSlide} />
+      )}
       {highlightIds.map((slide, index) => {
         return (
           <div
@@ -36,7 +41,12 @@ function HLImageSlider() {
             // key={index}
           >
             {index === current && (
-              <Item className="bg-gray-200" id={slide} key={slide} />
+              <Item
+                className="bg-gray-200"
+                id={slide}
+                key={slide}
+                setShowArrow={setShowArrow}
+              />
             )}
           </div>
         );

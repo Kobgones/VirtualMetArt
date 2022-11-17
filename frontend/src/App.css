@@ -18,7 +18,6 @@
 
 .logo:hover {
   transform: scale(1.03);
-  /* fill: ("../src/assets/logo1-black.svg"); */
 }
 
 h1,
@@ -35,6 +34,10 @@ select {
 
 .page-title {
   transform: rotate(-90deg);
+}
+
+.modalCSS {
+  z-index: 5;
 }
 
 @media only screen and (max-width: 767px) {
