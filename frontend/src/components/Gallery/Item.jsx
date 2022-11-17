@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
 
-function Item({ id }) {
-  const [item, setItem] = useState({}); // Object obtained from fetching an specific query
+function Item({ id, setShowArrow }) {
+  const [item, setItem] = useState({});
   const [showModal, setShowModal] = React.useState(false);
 
   useEffect(() => {
@@ -15,12 +15,17 @@ function Item({ id }) {
       .catch((err) => console.error(err));
   }, []);
 
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+    setShowArrow(showModal);
+  };
+
   if (item.primaryImageSmall)
     // Fill the item component with the object's info ONLY if the object has an image
     return (
       <div className="w-80 m-auto pb-10 sm:w-9/12 lg:grid lg:grid-flow-col lg:w-fit lg:items-center lg:gap-x-6 lg:px-16 galery-shadow">
         {/* image showing modal component on click */}
-        <button type="button" onClick={() => setShowModal(!showModal)}>
+        <button type="button" onClick={() => handleShowModal()}>
           {" "}
           <Modal
             showModal={showModal}

@@ -16,6 +16,10 @@
   scroll-behavior: smooth;
 }
 
+.logo:hover {
+  transform: scale(1.03);
+}
+
 h1,
 h2,
 h3 {
@@ -32,17 +36,21 @@ select {
   transform: rotate(-90deg);
 }
 
-@media only screen and (max-width: 1240px) {
+.modalCSS {
+  z-index: 5;
+}
+
+@media only screen and (max-width: 767px) {
   .logo {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 70px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .logo {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 100px;
   }
 }
 
