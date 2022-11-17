@@ -22,7 +22,14 @@ body {
 @media screen and (max-width: 1023px) {
   .hlMobile {
     visibility: visible;
+    /*optionnel*/
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    text-align: center;
   }
+
   .hlListObjects {
     display: flex;
     justify-content: center;
