@@ -1,3 +1,15 @@
+.hidden {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+body {
+  background-color: #23243c;
+}
+
 /*********************** MEDIA QUERIES RESPONSIVE *********************/
 
 @media screen and (max-width: 640px) {
@@ -5,12 +17,19 @@
     font-size: 60px;
     padding-top: 60px;
   }
-  .hlCarousel {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1023px) {
+  .hlMobile {
+    visibility: visible;
+    /*optionnel*/
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    text-align: center;
+  }
+
   .hlListObjects {
     display: flex;
     justify-content: center;
@@ -36,6 +55,17 @@
   .hlNameArtist {
     padding-bottom: 20px;
   }
+  /* .hlCarousel {
+    display: none;
+  } */
+
+  .slider {
+    display: none;
+  }
+
+  .hlListObjects {
+    display: none;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1023px) {
@@ -43,12 +73,12 @@
     font-size: 100px;
     padding-top: 100px;
   }
-  .hlCarousel {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1024px) {
+  .hlMobile {
+    display: none;
+  }
   .hl-Title {
     font-size: 100px;
     padding-top: 100px;
@@ -66,36 +96,38 @@
   }
 
   .HLSlideImages {
-    width: 700px;
-    height: 700px;
-    border-radius: 10px;
+    /* width: 700px;
+    height: 700px; */
+    /* border-radius: 30px; */
   }
 
   .right-arrow {
     position: absolute;
     top: 57%;
-    right: 80px;
+    right: 30%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
     z-index: 2;
     cursor: pointer;
     user-select: none;
+    opacity: 0.3;
   }
   .left-arrow {
     position: absolute;
-    top: 43%;
-    right: 80px;
+    top: 30%;
+    right: 30%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
     z-index: 2;
     cursor: pointer;
     user-select: none;
+    opacity: 0.3;
   }
   .right-arrow:hover {
-    opacity: 0.5;
+    opacity: 1;
   }
   .left-arrow:hover {
-    opacity: 0.5;
+    opacity: 1;
   }
 
   .slide {
@@ -112,13 +144,14 @@
 
 @media screen and (min-width: 1440px) {
   .right-arrow {
-    top: 60%;
-    right: 15%;
-    font-size: 4.5rem;
+    font-size: 4rem;
+    top: 56%;
+    right: 35%;
   }
+
   .left-arrow {
-    top: 40%;
-    right: 15%;
-    font-size: 4.5rem;
+    font-size: 4rem;
+    top: 30%;
+    right: 35%;
   }
 }

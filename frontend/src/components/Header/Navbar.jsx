@@ -8,11 +8,16 @@ function Navbar() {
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
+
   return (
     <nav className={`navBar ${showLinks ? "showNav" : "hideNav"}`}>
       <div className="navBarLogo">
         <Link to="/">
-          <img className="logo" src="./src/assets/logo2white.svg" alt="logo" />
+          <img
+            className="logo"
+            src="../src/assets/logo-Virtual.svg"
+            alt="logo"
+          />
         </Link>
       </div>
       <ul className="navBarLinks">
