@@ -14,7 +14,7 @@ function Gallery() {
   useEffect(() => {
     setIsProcessing(true); // active the loader
     fetch(
-      `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=cezanne`
+      `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=gogh`
     )
       .then((response) => response.json())
       .then((result) => {
