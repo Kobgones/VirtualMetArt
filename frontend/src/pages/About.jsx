@@ -6,7 +6,7 @@ function About() {
     <div className="about-bg bg-background">
       <div className="about-image bg-[url('./media/about-background.jpg')] bg-cover	bg-center h-screen flex flex-wrap justify-start sm:justify-center">
         <div className="about-title-div w-16 h-0 pb-20">
-          <h1 className="page-title text-white text-5xl md:text-7xl mt-36">
+          <h1 className="page-title text-white text-5xl md:text-8xl mt-36">
             About
           </h1>
         </div>

@@ -16,7 +16,7 @@ function Item({ id }) {
 
   if (item.primaryImageSmall)
     return (
-      <div className="w-80 m-auto pb-10 sm:w-9/12 lg:grid lg:grid-flow-col lg:w-fit lg:items-center	lg:gap-x-6 lg:px-16 galery-shadow">
+      <div className="w-80 m-auto pb-10 sm:w-9/12 lg:grid lg:grid-flow-col lg:w-fit lg:items-center lg:gap-x-6 lg:px-16 galery-shadow">
         {/* image showing modal component on click */}
         <button type="button" onClick={() => setShowModal(!showModal)}>
           {" "}
@@ -31,10 +31,10 @@ function Item({ id }) {
             alt={item.title}
           />{" "}
         </button>
-        <h2 className="text-xl text-center my-6 text-background">
+        <h2 className="text-2xl text-center my-6 text-background">
           {item.title}
         </h2>
-        <h3 className="italic text-center my-6 text-background">
+        <h3 className="italic text-xl text-center my-6 text-background">
           {item.artistDisplayName}
         </h3>
       </div>
