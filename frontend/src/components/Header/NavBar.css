@@ -17,6 +17,7 @@
   height: 40px;
   background: transparent;
   border: none;
+  display: block;
 }
 
 .navBarLinks {
@@ -44,18 +45,17 @@
   display: block;
   padding: 1.5rem;
   font-size: 6vw;
+  transition: 0.7s;
 }
 
 .navBarLink:hover {
   color: #ecb365;
 }
-.navBurger {
-  display: block;
-}
+
 .navBurger:hover {
   cursor: pointer;
 }
-
+/* Creating white lines to create the burger */
 .burgerLine,
 .burgerLine::before,
 .burgerLine::after {
@@ -74,21 +74,27 @@
   left: 0;
 }
 
+/* Position of white line before */
 .burgerLine::before {
   transform: translateY(-10px);
 }
 
+/* Position of white line after */
 .burgerLine::after {
   transform: translateY(10px);
 }
+
+/* middle white line disapear when showNav is active */
 .showNav .burgerLine {
   width: 0;
   background: transparent;
 }
 
+/* top line rotate when showNav is active */
 .showNav .burgerLine::before {
   transform: rotate(45deg);
 }
+/* bottom line rotate when showNav is active */
 .showNav .burgerLine::after {
   transform: rotate(-45deg);
 }
@@ -120,4 +126,17 @@
 }
 .showNav .slideInDown-4 {
   transition: all 1.3s ease-out;
+}
+
+/* broad the area in order to facilitate the click on the cross */
+.showNav .navBurger {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.logo {
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
 }
