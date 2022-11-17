@@ -50,6 +50,21 @@ function Gallery() {
     }
   };
 
+  const clearFilters = () => {
+    setSearch("");
+    setSearchIdDepartment(null);
+    setIsProcessing(true); // active the loader
+    fetch(
+      `https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&hasImages=true&q=gogh`
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        setIds(result.objectIDs || []);
+        setIsProcessing(false); // disable loader after the fetch
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <div className="bg-primary min-h-screen w-screen">
       <Filters
@@ -58,6 +73,7 @@ function Gallery() {
         searchIdDepartment={searchIdDepartment}
         setSearchIdDepartment={setSearchIdDepartment}
         setIds={setIds}
+        clearFilters={clearFilters}
       />
       <Search
         search={search}

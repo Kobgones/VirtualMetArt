@@ -6,6 +6,7 @@ function Filters({
   searchIdDepartment,
   setSearchIdDepartment,
   setIds,
+  clearFilters,
 }) {
   // fetch to get all departments in the museum
   useEffect(() => {
@@ -30,6 +31,11 @@ function Filters({
       .catch((err) => console.error(err));
   }, [searchIdDepartment]);
 
+  const clickClearFilters = () => {
+    clearFilters();
+    // window.location.reload(true); // Last ressource solution: refreshes the page, clearing everything
+  };
+
   return (
     <div>
       <section className="pt-24 w-full flex items-center justify-evenly sm:flex-col">
@@ -47,7 +53,9 @@ function Filters({
               value={searchIdDepartment}
               onChange={(event) => setSearchIdDepartment(event.target.value)}
             >
-              <option value="">Exhibitions</option>
+              <option value="0" selected>
+                Exhibitions
+              </option>
               {allDepartments.map((department) => (
                 <option value={department.departmentId}>
                   {department.displayName}
@@ -57,6 +65,9 @@ function Filters({
             <button
               type="button"
               className="w-56 mb-3 text-xl text-center text-background sm:mt-6"
+              onClick={() => {
+                clickClearFilters();
+              }}
             >
               Clear Filters
             </button>
