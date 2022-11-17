@@ -13,7 +13,7 @@ function Highlights() {
       <HLImagesList />
       <div className="hlCarousel">
         {/* DISPLAY CAROUSEL THEN SCREEN > Tablet 1024px */}
-        <HLImageSlider slides={HLSliderData} />;
+        <HLImageSlider slides={HLSliderData} />
       </div>
       <br />
     </div>

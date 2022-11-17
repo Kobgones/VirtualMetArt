@@ -1,47 +1,61 @@
 import React, { useState } from "react";
 import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
-import HLSliderData from "./HLSliderData";
 import "../styles/Highlights.css";
+import Item from "./Gallery/Item";
 
-function HLImageSlider({ slides }) {
+function HLImageSlider() {
   const [current, setCurrent] = useState(0);
-  const { length } = slides;
+  const [showArrow, setShowArrow] = React.useState(true);
+
+  const highlightIds = [
+    11417, 436532, 436105, 436545, 437394, 437881, 438754, 437329, 204812,
+    438817, 437153, 437790,
+  ];
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent(current === highlightIds.length - 1 ? 0 : current + 1);
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent(current === 0 ? highlightIds.length - 1 : current - 1);
   };
 
   // console.log(current);
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
+  if (!Array.isArray(highlightIds) || highlightIds.length <= 0) {
     return null;
   }
 
   return (
-    <section className="slider">
-      <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleDown className="right-arrow" onClick={nextSlide} />
-      {HLSliderData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            // key={index}
-          >
-            {index === current && (
-              <img
-                src={slide.image}
-                alt="showroom pictures"
-                className="HLSlideImages"
-              />
-            )}
-          </div>
-        );
-      })}
-    </section>
+    <>
+      <section className="slider">
+        {showArrow && (
+          <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
+        )}
+        {showArrow && (
+          <FaArrowAltCircleDown className="right-arrow" onClick={nextSlide} />
+        )}
+        {highlightIds.map((slide, index) => {
+          return (
+            <div className={index === current ? "slide active" : "slide"}>
+              {index === current && (
+                <Item
+                  className="bg-gray-200"
+                  id={slide}
+                  key={slide}
+                  setShowArrow={setShowArrow}
+                />
+              )}
+            </div>
+          );
+        })}
+      </section>
+      <section className="hlMobile">
+        {highlightIds.map((slide) => (
+          <Item id={slide} key={slide} />
+        ))}
+      </section>
+    </>
   );
 }
 
