@@ -11,7 +11,7 @@ function Modal({ showModal, item }) {
             <div className="fullscreen bg-primary svg-modal outline-none focus:outline-none lg:items-center lg:justify-center lg:h-screen lg:overflow-hidden">
               {/* image and detaila showed with API */}
 
-              <div className="lg:flex pt-10 lg:items-center lg:px-12">
+              <div className="lg:flex pt-20 lg:items-center lg:px-12">
                 <a href={item.primaryImage} target="_blank" rel="noreferrer">
                   <img
                     className="rounded-md w-fit p-12 lg:max-h-fit lg:max-w-screen-xl"
