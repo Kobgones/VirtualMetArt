@@ -39,12 +39,7 @@ function HLImageSlider() {
           return (
             <div className={index === current ? "slide active" : "slide"}>
               {index === current && (
-                <Item
-                  className="hlDesktop"
-                  id={slide}
-                  key={slide}
-                  setShowArrow={setShowArrow}
-                />
+                <Item id={slide} key={slide} setShowArrow={setShowArrow} />
               )}
             </div>
           );

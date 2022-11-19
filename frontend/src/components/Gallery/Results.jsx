@@ -25,7 +25,7 @@ function Results({ ids }) {
   }, [page]);
 
   return ids.length > 0 ? ( // Show item components and "Next" button only if there's been a successful research
-    <div>
+    <div className="resultsPage">
       {idsToShow.map((id) => (
         <Item id={id} key={id} />
       ))}

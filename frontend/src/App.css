@@ -42,11 +42,11 @@ select {
 
 /****************Effect ItemImages********************/
 
-.itemImagesDiv:hover {
-  box-shadow: 0 5px 35px 5px #ccb1ab;
+.resultsPage .itemImagesDiv:hover {
+  box-shadow: 0px 5px 35px 0px #ffffff;
   transform: rotate(1deg) scale(1.04) translate(-10px);
   transition: transform 1s, box-shadow 1s, opacity 1s;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /*******************Media Queries*******************/
