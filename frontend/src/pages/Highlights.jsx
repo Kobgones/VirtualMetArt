@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Highlights.css";
 import HLImageSlider from "../components/HLImageSlider";
-import HLSliderData from "../components/HLSliderData";
 
 function Highlights() {
   return (
@@ -11,7 +10,7 @@ function Highlights() {
       </div>
       <div className="hlCarousel">
         {/* DISPLAY CAROUSEL THEN SCREEN > Tablet 1024px */}
-        <HLImageSlider slides={HLSliderData} />
+        <HLImageSlider />
       </div>
       <br />
     </div>

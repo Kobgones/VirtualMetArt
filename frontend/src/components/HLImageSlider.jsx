@@ -49,6 +49,9 @@ function HLImageSlider() {
         {highlightIds.map((slide) => (
           <Item id={slide} key={slide} />
         ))}
+        {/* {highlightIds.map((slide) => {
+          return <Item id={slide} key={slide} />;
+        })} */}
       </section>
     </>
   );
