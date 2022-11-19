@@ -40,6 +40,17 @@ select {
   z-index: 5;
 }
 
+/****************Effect ItemImages********************/
+
+.itemImagesDiv:hover {
+  box-shadow: 0 5px 35px 5px #ccb1ab;
+  transform: rotate(1deg) scale(1.04) translate(-10px);
+  transition: transform 1s, box-shadow 1s, opacity 1s;
+  opacity: 0.7;
+}
+
+/*******************Media Queries*******************/
+
 @media only screen and (max-width: 767px) {
   .logo {
     width: 150px;
