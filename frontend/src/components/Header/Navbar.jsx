@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showLinks, setShowLinks] = React.useState(false);
+  const [showLogo, setShowLogo] = React.useState(true);
+  const controlNavBar = () => {
+    if (window.scrollY > 200) {
+      setShowLogo(true);
+    } else setShowLogo(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavBar);
+    return () => {
+      window.removeEventListener("scroll", controlNavBar);
+    };
+  }, []);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
 
   return (
-    <nav className={`navBar ${showLinks ? "showNav" : "hideNav"}`}>
-      <div className="navBarLogo">
+    <nav
+      className={`navBar ${
+        showLinks ? "showNav" : "hideNav"
+      } navBar ${showLogo} && 'navBar'`}
+    >
+      <div className={`active ${showLogo && "hidden"}`}>
         <Link to="/">
           <img
             className="logo"

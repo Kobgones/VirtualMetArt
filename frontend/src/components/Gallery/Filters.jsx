@@ -54,7 +54,7 @@ function Filters({
               onChange={(event) => setSearchIdDepartment(event.target.value)}
             >
               <option value="0" selected>
-                Exhibitions
+                Exhibition
               </option>
               {allDepartments.map((department) => (
                 <option value={department.departmentId}>
