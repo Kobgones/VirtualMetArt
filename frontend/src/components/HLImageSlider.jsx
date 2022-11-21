@@ -39,12 +39,7 @@ function HLImageSlider() {
           return (
             <div className={index === current ? "slide active" : "slide"}>
               {index === current && (
-                <Item
-                  className="bg-gray-200"
-                  id={slide}
-                  key={slide}
-                  setShowArrow={setShowArrow}
-                />
+                <Item id={slide} key={slide} setShowArrow={setShowArrow} />
               )}
             </div>
           );
@@ -54,6 +49,9 @@ function HLImageSlider() {
         {highlightIds.map((slide) => (
           <Item id={slide} key={slide} />
         ))}
+        {/* {highlightIds.map((slide) => {
+          return <Item id={slide} key={slide} />;
+        })} */}
       </section>
     </>
   );
