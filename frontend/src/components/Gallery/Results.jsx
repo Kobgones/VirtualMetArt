@@ -57,7 +57,7 @@ function Results({ ids }) {
   ) : (
     // if the research has not given any results, show this message and hide "Next" button
     <div className="flex flex-col items-center p-4">
-      <h1 className="text-white font-bold text-5xl p-2">
+      <h1 className="text-white font-bold text-center text-5xl p-2">
         No results were found
       </h1>
       <h2 className="text-white italic text-2xl p-2">
