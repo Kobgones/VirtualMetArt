@@ -2,7 +2,7 @@ import React from "react";
 
 function Search({ search, setSearch, getSearchIds }) {
   const handleEnterSubmit = (e) => {
-    if (e.keyCode === 13) getSearchIds();
+    if (e.keyCode === 13) getSearchIds(); // begin seаrching results with Enter key
   };
 
   return (
@@ -14,13 +14,13 @@ function Search({ search, setSearch, getSearchIds }) {
           placeholder="Search a title, artist or key word..."
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          onKeyDown={handleEnterSubmit}
+          onKeyDown={handleEnterSubmit} // indicates if the key Enter was pressed
         />
         <button
           className="bg-background svg-search text-background text-left opacity-90 h-12 w-16 text-[14px] sm:text-sm md:w-28 mt-8 mb-8 rounded-r-md focus:outline-none sm:mt-0"
           type="button"
           onClick={() => {
-            getSearchIds();
+            getSearchIds(); // searching results on click
           }}
         >
           Search
