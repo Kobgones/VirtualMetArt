@@ -4,14 +4,14 @@ import "../styles/About.css";
 function About() {
   return (
     <div className="about-bg bg-background">
-      <div className="about-image bg-[url('./media/about-background.jpg')] bg-cover	bg-center h-screen flex flex-wrap justify-start sm:justify-center">
-        <div className="about-title-div w-16 h-0 pb-20">
-          <h1 className="page-title text-white text-5xl md:text-8xl mt-36">
+      <div className="about-image bg-[url('./media/about-background.jpg')] h-[90vh] bg-cover bg-center flex flex-wrap justify-start sm:justify-center">
+        <div className="about-title-div ">
+          <h1 className="page-title text-white text-5xl sm:text-7xl md:text-8xl mt-36">
             About
           </h1>
         </div>
-        <div className="about-subtitle w-screen flex flex-wrap justify-center mt-24 pb-4">
-          <p className="about-description-p text-justify bg-background mx-8 sm:mx-16 my-8 px-6 md:px-20 lg:px-28 pt-4 sm:pt-10 min-w-xs max-w-4xl lg:text-xl">
+        <div className="about-subtitle w-screen flex flex-wrap justify-center mt-10 pt-3">
+          <p className="about-description-p text-justify bg-background mx-8 sm:mx-16 mb-8 px-6 md:px-20 lg:px-28 py-8 min-w-xs max-w-4xl md:text-2xl ">
             The Metropolitan Museum of Art presents over 5,000 years of art from
             around the world for everyone to experience and enjoy. The Museum
             lives in two iconic sites in New York City—The Met Fifth Avenue and
