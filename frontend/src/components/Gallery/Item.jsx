@@ -32,11 +32,13 @@ function Item({ id, setShowArrow }) {
             setShowModal={setShowModal}
             item={item}
           />
-          <img
-            className="rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-            src={item.primaryImageSmall}
-            alt={item.title}
-          />{" "}
+          <div className="itemImagesDiv">
+            <img
+              className="itemImages"
+              src={item.primaryImageSmall}
+              alt={item.title}
+            />{" "}
+          </div>
         </button>
         <h2 className="text-2xl text-center my-6 text-background">
           {item.title}
