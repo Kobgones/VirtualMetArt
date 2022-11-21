@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showLinks, setShowLinks] = React.useState(false);
-  const [showLogo, setShowLogo] = React.useState(true);
-  const controlNavBar = () => {
-    if (window.scrollY > 200 && window.scrollY === 0) {
+  const [showLogo, setShowLogo] = React.useState(false);
+  const controlLogo = () => {
+    if (window.scrollY > 200) {
       setShowLogo(true);
     } else setShowLogo(false);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", controlNavBar);
+    window.addEventListener("scroll", controlLogo);
     return () => {
-      window.removeEventListener("scroll", controlNavBar);
+      window.removeEventListener("scroll", controlLogo);
     };
-  }, []);
+  }, [showLogo]);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
@@ -28,7 +28,7 @@ function Navbar() {
         showLinks ? "showNav" : "hideNav"
       } navBar ${showLogo} && 'navBar'`}
     >
-      <div className={`active ${showLogo && "hidden"}`}>
+      <div className={`${showLogo && "hidden"}`}>
         <Link to="/">
           <img
             className="logo"
