@@ -6,7 +6,7 @@ function Navbar() {
   const [showLinks, setShowLinks] = React.useState(false);
   const [showLogo, setShowLogo] = React.useState(true);
   const controlNavBar = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 200 && window.scrollY === 0) {
       setShowLogo(true);
     } else setShowLogo(false);
   };
