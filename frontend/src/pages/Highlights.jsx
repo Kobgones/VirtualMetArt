@@ -8,6 +8,7 @@ function Highlights() {
       <div className="hl-div-title">
         <h1 className="hl-Title text-center text-secondary ">Highlights</h1>
       </div>
+      <div className="border-hl" />
       <div className="hlCarousel">
         {/* DISPLAY CAROUSEL THEN SCREEN > Tablet 1024px */}
         <HLImageSlider />
