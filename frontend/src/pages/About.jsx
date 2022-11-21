@@ -11,7 +11,7 @@ function About() {
           </h1>
         </div>
         <div className="about-subtitle w-screen flex flex-wrap justify-center mt-10 pt-3">
-          <p className="about-description-p text-justify bg-background mx-8 sm:mx-16 mb-8 px-6 md:px-20 lg:px-28 py-8 min-w-xs max-w-4xl md:text-2xl ">
+          <p className="about-description-p text-justify bg-background mx-8 sm:mx-16 mb-8 px-6 md:px-20 lg:px-28 py-8 min-w-xs max-w-4xl md:text-xl ">
             The Metropolitan Museum of Art presents over 5,000 years of art from
             around the world for everyone to experience and enjoy. The Museum
             lives in two iconic sites in New York City—The Met Fifth Avenue and
