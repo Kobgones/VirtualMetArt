@@ -6,6 +6,7 @@ import Gallery from "./pages/Gallery";
 import Highlights from "./pages/Highlights";
 import About from "./pages/About";
 import Footer from "./components/Footer/Footer";
+import PageNotFound from "./pages/PageNotFound";
 
 import "./App.css";
 import "./styles/Gallery.css";
@@ -26,6 +27,8 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="highlights" element={<Highlights />} />
           <Route path="about" element={<About />} />
+          {/* only match this when no other routes match */}
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
       <Footer />

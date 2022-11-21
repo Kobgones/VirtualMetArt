@@ -18,6 +18,9 @@
   background: transparent;
   border: none;
   display: block;
+  position: fixed;
+  right: 0;
+  margin-right: 10px;
 }
 
 .navBarLinks {
@@ -132,11 +135,12 @@
 .showNav .navBurger {
   width: 40px;
   height: 40px;
-  position: relative;
+  position: fixed;
+  right: 0;
+  margin-right: 10px;
 }
 
-.logo {
-  top: 0;
-  width: 100%;
-  transition: top 0.3s;
+.hidden{
+    position: fixed;
+    transition: 0.3s linear;
 }
