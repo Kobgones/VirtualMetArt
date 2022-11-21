@@ -82,6 +82,7 @@ function Gallery() {
         setSearch={setSearch}
         getSearchIds={getSearchIds}
       />
+      <br />
       {/* ternary to display the loader or the result of the search (following the fetch) */}
       {isProcessing ? (
         <div className="flex justify-center">
