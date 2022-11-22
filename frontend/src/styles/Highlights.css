@@ -113,7 +113,7 @@ body {
   .right-arrow {
     position: absolute;
     top: 57%;
-    right: 30%;
+    right: 3%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
     z-index: 2;
@@ -124,7 +124,7 @@ body {
   .left-arrow {
     position: absolute;
     top: 30%;
-    right: 30%;
+    right: 3%;
     font-size: 3rem;
     color: rgb(255, 255, 255);
     z-index: 2;
@@ -155,16 +155,27 @@ body {
   .right-arrow {
     font-size: 4rem;
     top: 56%;
-    right: 35%;
+    right: 3%;
   }
 
   .left-arrow {
     font-size: 4rem;
     top: 30%;
-    right: 35%;
+    right: 3%;
   }
 
   .slider .itemImagesDiv:hover {
     transform: scale(1.05) translate(-20px);
   }
+}
+
+@media screen and (min-width: 1024px) {
+.border-hl {
+  border: 0.5px #ECB365 solid;
+  position: absolute;
+  bottom: -87px;
+  right: 117px;
+  height: 32rem;
+  width: 65rem;
+}
 }

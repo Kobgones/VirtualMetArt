@@ -40,12 +40,12 @@ function Item({ id, setShowArrow }) {
             />{" "}
           </div>
         </button>
-        <h2 className="text-2xl text-center my-6 text-background">
-          {item.title}
+        <h2 className="text-3xl text-center whitespace-normal my-6 text-background">
+          {item.title} <br />
+          <span className="italic text-xl text-center my-8">
+            {item.artistDisplayName}
+          </span>
         </h2>
-        <h3 className="italic text-xl text-center my-6 text-background">
-          {item.artistDisplayName}
-        </h3>
       </div>
     );
 }
