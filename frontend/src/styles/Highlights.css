@@ -96,7 +96,7 @@ body {
 
   .hl-Title {
     font-size: 100px;
-    padding-top: 100px;
+    padding-top: .5em;
   }
 
   .hlListObjects {
@@ -167,15 +167,4 @@ body {
   .slider .itemImagesDiv:hover {
     transform: scale(1.05) translate(-20px);
   }
-}
-
-@media screen and (min-width: 1024px) {
-.border-hl {
-  border: 0.5px #ECB365 solid;
-  position: absolute;
-  bottom: -87px;
-  right: 117px;
-  height: 32rem;
-  width: 65rem;
-}
 }

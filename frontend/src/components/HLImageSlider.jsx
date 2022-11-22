@@ -28,7 +28,7 @@ function HLImageSlider() {
 
   return (
     <>
-      <section className="slider">
+      <section className="slider lg:overflow-hidden">
         {showArrow && (
           <FaArrowAltCircleUp className="left-arrow" onClick={prevSlide} />
         )}
