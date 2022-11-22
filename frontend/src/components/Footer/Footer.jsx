@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     // <div className="relative">
-    <div className="footer bg-primary h-16 sm:h-20 px-1 flex justify-between items-center relative bottom-0 mx-4 lg:mx-8">
+    <div className="footer bg-primary h-[10vh] flex justify-between items-center relative bottom-0 px-4 lg:px-8">
       <div className="footer-legal my-auto">
         <ul className="footer-legal-ul text-white text-xs flex flex-col ml-2 leading-5 sm:leading-6">
           <li>Conditions générales</li>
