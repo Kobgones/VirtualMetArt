@@ -37,17 +37,20 @@ function HLImageSlider() {
         )}
         {highlightIds.map((slide, index) => {
           return (
-            <div className={index === current ? "slide active" : "slide"}>
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={slide}
+            >
               {index === current && (
-                <Item id={slide} key={slide} setShowArrow={setShowArrow} />
+                <Item id={slide} setShowArrow={setShowArrow} />
               )}
             </div>
           );
         })}
       </section>
       <section className="hlMobile">
-        {highlightIds.map((slide) => (
-          <Item id={slide} key={slide} />
+        {highlightIds.map((id) => (
+          <Item id={id} key={id} />
         ))}
         {/* {highlightIds.map((slide) => {
           return <Item id={slide} key={slide} />;
