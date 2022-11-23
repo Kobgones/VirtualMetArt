@@ -21,14 +21,15 @@ function Filters({
   }, []);
 
   useEffect(() => {
-    fetch(
-      `https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=${searchIdDepartment}`
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        setIds(result.objectIDs);
-      })
-      .catch((err) => console.error(err));
+    if (searchIdDepartment > 0)
+      fetch(
+        `https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=${searchIdDepartment}`
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          setIds(result.objectIDs);
+        })
+        .catch((err) => console.error(err));
   }, [searchIdDepartment]);
 
   const clickClearFilters = () => {
